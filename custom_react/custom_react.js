@@ -1,10 +1,11 @@
 const customRender = (reactElement, mainContainer) => {
-    const element = document.createElement(reactElement.type)
-    Object.keys(reactElement.props).forEach((attributes)=> {
-element.se
-    })
-    
-}
+  const element = document.createElement(reactElement.type);
+  Object.keys(reactElement.props).forEach((attribute) => {
+    element.setAttribute(attribute, reactElement.props.attribute);
+  });
+  element.innerHTML = reactElement.children;
+  mainContainer.appendChild(element);
+};
 
 const reactElement = {
   type: "a",
@@ -14,7 +15,7 @@ const reactElement = {
   },
   children: "Click me to visit google",
 };
-console.log(Object.keys(reactElement.props))
+
 const mainContainer = document.querySelector("#root");
 
-// customRender(reactElement, mainContainer)
+customRender(reactElement, mainContainer);
