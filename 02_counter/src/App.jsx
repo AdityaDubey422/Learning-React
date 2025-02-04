@@ -1,16 +1,20 @@
 import { useState } from "react";
 
 function App() {
-  let [count, setCount] = useState(0)
+  let [count, setCount] = useState(0);
   // let count = 0;
   const increaseValue = () => {
     if (count < 20) {
-      setCount(++count)
+      setCount(++count);
+      setCount(++count);
+      setCount(++count);
+      setCount(++count);
+      setCount(++count);
     }
   };
   const decreaseValue = () => {
     if (count > 0) {
-      setCount(--count)
+      setCount(--count);
     }
   };
   return (
@@ -23,10 +27,13 @@ function App() {
             className="bg-pink-600 mr-5 p-2 rounded-sm text-l hover:bg-pink-700"
             onClick={increaseValue}
           >
-            Increase 
+            Increase
           </button>
-          <button className="bg-pink-600 mr-5 p-2 rounded-sm text-l hover:bg-pink-700" onClick={decreaseValue}>
-            Decrease 
+          <button
+            className="bg-pink-600 mr-5 p-2 rounded-sm text-l hover:bg-pink-700"
+            onClick={decreaseValue}
+          >
+            Decrease
           </button>
         </div>
       </div>
